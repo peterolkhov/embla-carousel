@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Embla autoplay.stop() inside select</title>
+  <style>
+    body { font: 16px system-ui; max-width: 700px; margin: 40px auto; }
+    #embla { overflow: hidden; width: 300px; border: 1px solid #888; }
+    #container { display: flex; }
+    #container > div { flex: 0 0 300px; padding: 40px 0; text-align: center; background: #e6edff; }
+    pre { white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Stop autoplay on the first selection</h1>
+  <p>Click Start. The first automatic selection calls <code>autoplay.stop()</code>.
+     It should stay on slide 1. The default delay is four seconds.</p>
+  <button id="start">Start</button>
+  <div id="embla"><div id="container"><div>Slide 0</div><div>Slide 1</div><div>Slide 2</div></div></div>
+  <pre id="log"></pre>
+  <script src="repro.js"></script>
+</body>
+</html>
